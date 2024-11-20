@@ -1,11 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Découvrez l'application DevFinder qui vous donnera l'occasion de chercher tous les Développeur actives sur Github">
+  <meta name="keywords"
+    content="Git, Github, Développeurs, Programmation, Full-Stack web developer, Front-end, Back-end">
+  <script src="https://kit.fontawesome.com/8dd174d5fa.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/heroicons@2.0.16/heroicons.min.js"></script>
+  <title>DevFinder | Accueil</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'noir': '#242423',
+            'gris-fonce': '#333533',
+            'gris-claire': '#CFDBD5',
+            'orange': '#F5CB5C',
+            'orange-hover': '#D6AB3B',
+            'blanc': '#E8EDDF'
+          },
+          boxShadow: {
+            'outset-custom': 'rgba(0, 0, 0, 0.3) 0px 5px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
+            'inset-custom': 'rgba(0, 0, 0, 0.25) 2px 2px 3px 1px inset',
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    
+
+<body class="px-4">
+  <header class="flex w-full lg:w-1/2 lg:mx-auto justify-between p-4">
+    <div class="w-[40%]">
+      <img src="../assets/imgs/light-logo.png" alt="logo DevFinder">
+    </div>
+    <div class="flex justify-center items-center rounded">
+      <h2 class="font-bold text-xl text-gris-fonce">DARK</h2>
+      <i class="fa-solid fa-moon text-gris-fonce ml-2 text-3xl font-bold"></i>
+    </div>
+  </header>
+  <form class="max-w-md lg:w-1/2 mx-auto mb-8 lg:mb-6">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+    <div class="relative w-full">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg class="w-4 h-4 text-orange" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+        </svg>
+      </div>
+      <input type="search" id="default-search"
+        class="shadow-outset-custom block w-full p-4 ps-10 text-sm text-gris-fonce border border-gray-300 rounded-lg bg-white focus:ring-orange focus:border-orange"
+        placeholder="Search Github Username..." required />
+      <button type="submit"
+        class="text-fris-fonce absolute end-2.5 bottom-2.5 bg-orange hover:bg-orange-hover focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded text-sm px-4 py-2 shadow-inset-custom">Search</button>
+    </div>
+  </form>
+
+
+
+  <div class="flex flex-col lg:w-1/2 shadow-outset-custom lg:mx-auto px-4 rounded">
+    <div class="flex p-2 m-2">
+      <div class="h-24 w-24 lg:h-32 lg:w-32">
+        <img class="lg:w-full lg:h-full rounded-full object-cover mt-4" src="../assets/imgs/avatar.png" alt="">
+      </div>
+      <div class="p-1 pt-2 ml-4 lg:my-auto lg:flex lg:justify-between lg:w-3/4">
+        <div>
+          <h2 class="font-bold text-2xl text-gris-fonce">Karim Karim</h2>
+          <h3 class="text-lg text-orange font-semibold">@KarimKarim</h3>
+        </div>
+        <h4 class="text-gris-fonce">Joined <span>12 Mar 2024</span></h4>
+      </div>
+    </div>
+    <div class="p-2 m-2">
+      <p>This profil has no bio</p>
+    </div>
+    <div class="bg-blanc flex justify-between m-4 lg:w-3/4 lg:ml-32 px-8 py-2 rounded">
+      <div class="justify-center items-center">
+        <h3 class="text-center font-bold text-gris-fonce lg:text-lg">Repos</h3>
+        <h5 class="text-center">4</h5>
+      </div>
+      <div class="justify-center items-center">
+        <h3 class="text-center font-bold text-gris-fonce lg:text-lg">Followers</h3>
+        <h5 class="text-center">5</h5>
+      </div>
+      <div class="justify-center items-center">
+        <h3 class="text-center font-bold text-gris-fonce lg:text-lg">Following</h3>
+        <h5 class="text-center">2</h5>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col lg:flex-row m-4 px-8 p-4 lg:w-3/4 lg:ml-32 text-gris-fonce">
+      <div class="lg:w-1/2">
+        <div class="flex">
+          <div class="w-1/4">
+            <i class="fa-solid fa-location-dot mr-6 text-center"></i>
+          </div>
+          <div class="w-[70%]">
+            <h3 class="font-bold">Warsaw</h3>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-1/4">
+            <i class="fa-solid fa-link mr-6 text-center"></i>
+          </div>
+          <div class="w-[70%]">
+            <h3>Not Available</h3>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="lg:w-1/2">
+          <div class="flex">
+            <div class="w-1/4">
+              <i class="fa-brands fa-twitter mr-6 text-center"></i>
+            </div>
+            <div class="w-[70%]">
+              <h3>Not Available</h3>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="w-1/4">
+              <i class="fa-solid fa-building mr-6 text-center"></i>
+            </div>
+            <div class="w-[70%]">
+              <h3>Not Available</h3>
+            </div>
+          </div>
+        </div>
+
+
+      
+    </div>
+
+  </div>
+  <!-- <img src="../assets/imgs/DevFinder - Desktop.jpg" alt=""> -->
+  <!-- <img src="../assets/imgs/DevFinder - Mobile.jpg" alt=""> -->
 </body>
+
 </html>
